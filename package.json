@@ -1,11 +1,10 @@
 {
   "name": "sohrab-component",
   "version": "0.1.0",
-  "repository": "https://github.com/sajalkhan/Personal-React-Library",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com/sajalkhan"
   },
-  "private": true,
+  "private": false,
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
