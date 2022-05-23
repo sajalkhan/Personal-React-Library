@@ -1,0 +1,53 @@
+.a-text-area {
+  position: relative;
+  width: 100%;
+  height: 4rem;
+
+  &__input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    resize: none;
+    background: none;
+    border: 1px solid $color-grey-1;
+    border-radius: 0.5rem;
+    outline: none;
+
+    &:focus {
+      border: 1.5px solid $color-primary-blue;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 0.8rem;
+    left: 1rem;
+    padding: 0 0.5rem;
+    font-size: 1.5rem;
+    color: $color-grey-6;
+    background-color: $color-base-white;
+    transition: 0.3s;
+  }
+
+  &__input:focus + &__label {
+    top: -1rem;
+    left: 1rem;
+    z-index: 10;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: $color-primary-blue;
+  }
+
+  &__input:not(:placeholder-shown):not(:focus) + &__label {
+    top: -1rem;
+    left: 1rem;
+    z-index: 10;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}

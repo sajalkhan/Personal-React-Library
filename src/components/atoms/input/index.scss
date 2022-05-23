@@ -1,0 +1,67 @@
+.a-input {
+  position: relative;
+  width: 100%;
+  height: 3rem;
+
+  &--size {
+    &-small {
+      width: 25%;
+    }
+
+    &-medium {
+      width: 40%;
+    }
+
+    &-large {
+      width: 80%;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    background: none;
+    border: 1px solid $color-grey-1;
+    border-radius: 0.5rem;
+    outline: none;
+
+    &:focus {
+      border: 1.5px solid $color-primary-blue;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 1.2rem;
+    left: 1rem;
+    padding: 0 0.5rem;
+    font-size: 1.5rem;
+    color: $color-grey-6;
+    background-color: $color-base-white;
+    transition: 0.3s;
+  }
+
+  &__text:focus + &__label {
+    top: -1rem;
+    left: 1rem;
+    z-index: 10;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: $color-primary-blue;
+  }
+
+  &__text:not(:placeholder-shown):not(:focus) + &__label {
+    top: -1rem;
+    left: 1rem;
+    z-index: 10;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}
